@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "personal": {
+      "alias": "claude-personal",
+      "configDir": "/Users/Akseldkw/.claude-personal"
+    }
+  }
+}
