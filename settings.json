@@ -16,7 +16,8 @@
       "mcp__plugin_claude-mem_mcp-search__smart_outline",
       "Skill(update-config)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(jq *)"
     ],
     "defaultMode": "acceptEdits"
   },
