@@ -1,23 +1,35 @@
 {
   "env": {
-    "PYTHONPATH": "/Users/Akseldkw/coding/kretsinger",
-    "MAMBA_ROOT_PREFIX": "/Users/Akseldkw/micromamba",
+    "PYTHONPATH": "/home/Akseldkw/coding/kretsinger",
+    "MAMBA_ROOT_PREFIX": "/home/Akseldkw/micromamba",
     "PYTHONUNBUFFERED": "1"
   },
   "permissions": {
     "allow": [
       "Read",
       "Write",
-      "Edit(//Users/Akseldkw/coding/Columbia/**)",
-      "Edit(//Users/Akseldkw/coding/**)",
+      "Edit(//home/Akseldkw/coding/Columbia/**)",
+      "Edit(//home/Akseldkw/coding/**)",
       "Bash",
+      "Bash(jq *)",
+      "Bash(python *)",
+      "Bash(python -c ' *)",
+      "Bash(python3 *)",
+      "Bash(break)",
       "Grep",
       "mcp__plugin_claude-mem_mcp-search__get_observations",
       "mcp__plugin_claude-mem_mcp-search__smart_outline",
       "Skill(update-config)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:github.com)",
-      "Bash(jq *)"
+      "WebSearch",
+      "WebFetch",
+      "mcp__claude_ai_Hugging_Face__hub_repo_search",
+      "mcp__claude_ai_Hugging_Face__hub_repo_details",
+      "mcp__claude_ai_Hugging_Face__hub_repo_search",
+      "mcp__claude_ai_Hugging_Face__hub_repo_details",
+      "mcp__plugin_claude-mem_mcp-search__smart_search",
+      "mcp__plugin_claude-mem_mcp-search__search"
     ],
     "defaultMode": "acceptEdits"
   },
@@ -29,11 +41,16 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/Akseldkw/.claude/hooks/pre_bash.sh"
+            "command": "/home/Akseldkw/.claude/hooks/pre_bash.sh"
           }
         ]
       }
-    ]
+    ],
+    "Notification": [
+      { "matcher": "", "hooks": [
+          { "type": "command", "command": "notify-send 'Claude' 'Task complete'" }
+      ]}
+  ]
   },
   "enabledPlugins": {
     "claude-mem@thedotmack": true
@@ -47,5 +64,8 @@
     }
   },
   "effortLevel": "high",
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "theme": "auto",
+  "agentPushNotifEnabled": true,
+  "preferredNotifChannel": "terminal_bell"
 }
